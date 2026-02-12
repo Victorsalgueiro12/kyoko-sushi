@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyoko Sushi</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2 onclick="scrollHome()">KYOKO <span>SUSHI</span></h2>
+
+    <ul>
+        <li onclick="scrollHome()">Home</li>
+        <li onclick="scrollToMenu()">Cardápio</li>
+        <li onclick="scrollToMenu()">Sobre</li>
+        <li onclick="orderNow()">Contato</li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <h1>
+            <span class="yellow">Sabor</span><br>
+            <span class="red">Oriental</span>
+        </h1>
+
+        <p>
+            Experimente o verdadeiro sabor do sushi premium.
+            Ingredientes frescos, combinações exclusivas e
+            a especialidade da casa: Sushi Burger.
+        </p>
+
+        <div class="buttons">
+            <a href="#menu" class="btn btn-primary">Ver Cardápio</a>
+            <a href="https://wa.me/5582993955723?text=Ol%C3%A1,%20gostaria%20de%20fazer%20meu%20pedido" class="btn btn-secondary" target="_blank">Pedir Agora</a> 
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="kyoko.png" alt="Kyoko Sushi">
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="categories" id="menu">
+
+    <div class="section-title">
+        <p class="subtitle">Veja nossas opções</p>
+        <h2>Escolha Por <span>Categoria</span></h2>
+    </div>
+
+    <!-- NOVAS CATEGORIAS COM IMAGEM LATERAL -->
+    <div class="category-grid small-categories">
+
+        <div class="category-card small" onclick="abrirCategoria('otoshi')">
+            <img src="otoshi.webp" alt="">
+            <h3>Otoshi</h3>
+        </div>
+
+        <div class="category-card small" onclick="abrirCategoria('porcoes')">
+            <img src="PORÇÕES.jpg" alt="">
+            <h3>Porções</h3>
+        </div>
+
+        <div class="category-card small" onclick="abrirCategoria('rolinho')">
+            <img src="https://images.unsplash.com/photo-1607301405390-d831c242f59b" alt="">
+            <h3>Rolinho</h3>
+        </div>
+
+        <div class="category-card small" onclick="abrirCategoria('yakissoba')">
+            <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56" alt="">
+            <h3>Yakissoba</h3>
+        </div>
+
+        <div class="category-card small" onclick="abrirCategoria('sobremesa')">
+            <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641643d" alt="">
+            <h3>Sobremesas</h3>
+        </div>
+
+        <div class="category-card small" onclick="abrirCategoria('bebidas')">
+            <img src="COCA.jpg" alt="">
+            <h3>Bebidas</h3>
+        </div>
+
+    </div>
+
+    <!-- CATEGORIAS PRINCIPAIS (MANTER IMAGEM GRANDE REPRESENTATIVA) -->
+    <div class="category-grid">
+
+        <div class="category-card" onclick="abrirCategoria('temaki')">
+            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754">
+            <h3>Temaki</h3>
+        </div>
+
+        <div class="category-card" onclick="abrirCategoria('sashimi')">
+            <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641643d">
+            <h3>Sashimi</h3>
+        </div>
+
+        <div class="category-card" onclick="abrirCategoria('niguiri')">
+            <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252">
+            <h3>Niguiri</h3>
+        </div>
+
+        <div class="category-card" onclick="abrirCategoria('hotroll')">
+            <img src="https://images.unsplash.com/photo-1607301405390-d831c242f59b">
+            <h3>Hot Rolls</h3>
+        </div>
+
+        <div class="category-card" onclick="abrirCategoria('uramaki')">
+            <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56">
+            <h3>Uramaki</h3>
+        </div>
+
+        <div class="category-card" onclick="abrirCategoria('combinado')">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+            <h3>Combinados</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- HORÁRIO -->
+    <div class="opening-hours">
+
+        <div class="hours-card">
+            <h3>Horário de Funcionamento</h3>
+
+            <div class="hours-row">
+                <span>Seg - Qui</span>
+                <span>18:00 - 23:00</span>
+            </div>
+
+            <div class="hours-row">
+                <span>Sex - Sáb</span>
+                <span>18:00 - 00:00</span>
+            </div>
+
+            <div class="hours-row">
+                <span>Domingo</span>
+                <span>18:00 - 22:00</span>
+            </div>
+
+            <div class="status open" id="store-status">
+                Aberto agora
+            </div>
+
+        </div>
+
+    </div>
+
+     <div class="section-title">
+        <p class="subtitle">Veja nossas especialidades</p>
+        <h2>O melhor da <span>REGIÃO</span></h2>
+    </div> 
+
+    <div class="category-grid">
+
+    <div class="category-card" onclick="openCategory('uramaki')">
+        <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56">
+        <h3>Uramaki</h3>
+    </div>
+
+    <div class="category-card" onclick="openCategory('hot')">
+        <img src="https://images.unsplash.com/photo-1607301405390-d831c242f59b">
+        <h3>Hot Rolls</h3>
+    </div>
+
+    <div class="category-card" onclick="openCategory('temaki')">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754">
+        <h3>Temaki</h3>
+    </div>
+
+    <div class="category-card" onclick="openCategory('sashimi')">
+        <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641643d">
+        <h3>Sashimi</h3>
+    </div>
+
+    <div class="category-card" onclick="openCategory('combo')">
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+        <h3>Combinados</h3>
+    </div>
+
+    <div class="category-card" onclick="openCategory('burger')">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+        <h3>Yakissoba</h3>
+    </div>
+
+</div>
+
+<!-- ÁREA ONDE OS PRODUTOS VÃO APARECER -->
+<div id="productList" class="product-list"></div>
+
+    </div>
+
+</section>
+
+<script src="test.js"></script>
+<!-- MODAL PRODUTO -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+
+    <div id="variationBox" class="variation-box">
+        <p>Escolha:</p>
+        <label>
+            <input type="radio" name="variation" value="Normal" checked>
+            Normal
+        </label>
+        <label>
+            <input type="radio" name="variation" value="Hot">
+            Hot (Frito)
+        </label>
+    </div>
+
+    <div class="quantity-box">
+        <button onclick="changeQty(-1)">-</button>
+        <span id="qty">1</span>
+        <button onclick="changeQty(1)">+</button>
+    </div>
+
+    <button class="btn btn-primary" onclick="addToCart()">Adicionar</button>
+  </div>
+</div>
+
+<!-- BOTÃO FLUTUANTE CARRINHO -->
+<div class="cart-button" onclick="toggleCart()">
+    🛒 <span id="cartCount">0</span>
+</div>
+
+<!-- CARRINHO LATERAL -->
+<div class="cart" id="cart">
+    <div class="cart-header">
+        <h3>Seu Pedido</h3>
+        <span class="close-cart" onclick="toggleCart()">✕</span>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+        Total: R$ <span id="cartTotal">0</span>
+    </div>
+
+    <button class="btn btn-primary" onclick="finishOrder()">Finalizar Pedido</button>
+</div>
+
+<!-- MODAL CATEGORIA -->
+<div class="modal" id="categoryModal">
+  <div class="modal-content large">
+    <span class="close" onclick="closeCategoryModal()">×</span>
+    <h2 id="categoryTitle"></h2>
+    <div id="categoryProducts"></div>
+  </div>
+</div>
+
+<!-- MODAL FINALIZAÇÃO -->
+<div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-content">
+    <h3>Finalizar Pedido</h3>
+
+    <label>Forma de pagamento:</label>
+    <select id="paymentMethod" class="pix">
+      <option>Pix</option>
+      <option>Cartão</option>
+      <option>Dinheiro</option>
+    </select>
+
+    <label>Endereço:</label>
+    <input type="text" id="address" placeholder="Rua, número, bairro">
+
+    <button class="btn btn-primary" onclick="sendOrder()">Confirmar Pedido</button>
+    <button class="btn btn-secondary" onclick="closeCheckout()">Cancelar</button>
+  </div>
+</div>
+<div id="popup" class="popup" onclick="fecharPopup(event)">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span onclick="fecharPopup()" class="fechar">✕</span>
+    <h2>Escolha seu pedido</h2>
+    <div id="popupItens"></div>
+  </div>
+</div>
+
+
+</body>
+</html>
